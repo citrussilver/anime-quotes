@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3"></script>
     <title>Anime API</title>
 </head>
 <body>
@@ -15,23 +16,33 @@
             <h3>Random Anime Quote</h3>
             <h4></h4>
         </div>
-        <div class="outputEl">
-            <div id="quote"></div>
-            <div id="character"></div>
-            <div id="animeTitle"></div>
-        </div>
-        <button id="consumeBtn" class="btn">
-            <div class="btn-content">
-                <p>
-                    <span class="material-icons">
-                        auto_awesome
-                    </span>
-                </p>
-                <p id="btn-text">Get animu quote</p>
+        <div id="app">
+            <div class="outputEl">
+                <div class="spinner-wrapper" v-if="loading">
+                    <div class="spinner">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="quote-wrapper" v-else>
+                    <div id="quote">{{ aniQuote.quote }}</div>
+                    <div id="character">{{ aniQuote.character }}</div>
+                    <div id="animeTitle">{{ aniQuote.anime }}</div>
+                </div>
             </div>
+            <button id="consumeBtn" class="btn" @click="loadAniQuote">
+                <div class="btn-content">
+                    <p>
+                        <span class="material-icons">
+                            auto_awesome
+                        </span>
+                    </p>
+                    <p id="btn-text">Get animu quote</p>
+                </div>
             </button>
+        </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="vue-script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
