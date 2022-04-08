@@ -5,7 +5,7 @@ Vue.createApp({
         aniQuote: {
           quote: '',
           character: '',
-          anime: '',
+          animeTitle: '',
           quoteLength: 0
         }
       }

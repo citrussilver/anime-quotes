@@ -8,19 +8,19 @@
   font-size: 16px;
   --bg-color: #343434;
   --sub-color: #055E68;
-  --btn-bg-color: #B85C38;
+  --dark-orange: #B85C38;
   /* --bg-color: #557B83;
   --sub-color: #39AEA9;
-  --btn-bg-color: #A2D5AB; */
+  --dark-orange: #A2D5AB; */
   /* --bg-color: #33313B;
   --sub-color: #62374E;
-  --btn-bg-color: #007880; */
+  --dark-orange: #007880; */
   /* --bg-color: #4B5D67;
   --sub-color: #322F3D;
-  --btn-bg-color: #59405C; */
+  --dark-orange: #59405C; */
   /* --bg-color: #261C2C;
   --sub-color: #3E2C41;
-  --btn-bg-color: #5C527F; */
+  --dark-orange: #5C527F; */
   --anim-duration: 1s;
   --anim-fill-mode: forwards;
 }
@@ -90,7 +90,7 @@ body {
 }
 
 .btn {
-  background-color: var(--btn-bg-color);
+  background-color: var(--dark-orange);
   color: #fff;
   border: 0;
   border-radius: 10px;
@@ -166,14 +166,14 @@ body {
   width: 100%;
   height: 100%;
   border: 10px solid transparent;
-  border-top-color: #ad60f5;
+  border-top-color: var(--dark-orange);
   border-radius: 50%;
   animation: spinnerOne 1.2s linear infinite;
 }
 
 .spinner div:nth-child(2) {
   border: 10px solid transparent;
-  border-bottom-color: #ad60f5;
+  border-bottom-color: var(--dark-orange);
 }
 
 @keyframes spinnerOne {
