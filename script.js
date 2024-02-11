@@ -17,13 +17,14 @@ async function consumeApi() {
         }
     }
 
-    const res = await fetch('https://animechan.vercel.app/api/random')
+    const res = await fetch('https://animechan.xyz/api/random')
     const data = await res.json() //returns also a promise thus, 'await' keyword is used
     const quoteLength = data.quote.length
-    console.log(quoteLength)
+
     if (navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/iPhone/i) 
         || navigator.userAgent.match(/iPad/i)) {
+
         if(quoteLength > 215) {
             quote.classList.remove('scrollable-container')
             quote.classList.add('scrollable-container')
@@ -56,7 +57,7 @@ async function consumeApi() {
     character.innerHTML = data.character
     animeTitle.innerHTML = data.anime
 
-    // fetch('https://animechan.vercel.app/api/random')
+    // fetch('https://naninani')
     //     .then(res => res.json())
     //     .then(data => {
     //         quote.innerHTML = data.quote
