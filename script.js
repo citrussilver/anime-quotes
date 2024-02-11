@@ -17,10 +17,10 @@ async function consumeApi() {
         }
     }
 
-    const res = await fetch('https://animechan.vercel.app/api/random')
+    const res = await fetch('https://animechan.xyz/api/random')
     const data = await res.json() //returns also a promise thus, 'await' keyword is used
     const quoteLength = data.quote.length
-    console.log(quoteLength)
+
     if (navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/iPhone/i) 
         || navigator.userAgent.match(/iPad/i)) {

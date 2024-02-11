@@ -25,7 +25,7 @@ Vue.createApp({
       },
       consumeApi: async function() {
           const quote = document.getElementById('quote')
-          const res = await fetch('https://animechan.vercel.app/api/random')
+          const res = await fetch('https://animechan.xyz/api/random')
           const data = await res.json() //returns also a promise thus, 'await' keyword is used
           this.aniQuote.quoteLength = data.quote.length
           console.log(this.aniQuote.quoteLength)
