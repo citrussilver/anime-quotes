@@ -76,7 +76,7 @@ body {
 }
 
 #subtitle h4::after {
-  content: '-using Animechan API';
+  content: '-powered by Animechan API';
   opacity: 0.5;
   font-size: 0.8rem;
 }

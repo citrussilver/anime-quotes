@@ -28,7 +28,7 @@ Vue.createApp({
           const res = await fetch('https://animechan.xyz/api/random')
           const data = await res.json() //returns also a promise thus, 'await' keyword is used
           this.aniQuote.quoteLength = data.quote.length
-          console.log(this.aniQuote.quoteLength)
+
           if (navigator.userAgent.match(/Android/i)
               || navigator.userAgent.match(/iPhone/i) 
               || navigator.userAgent.match(/iPad/i)) {
